@@ -9,8 +9,8 @@
     <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
 </head>
 <body>
-    <div id="main" style="width: 500px;height:300px;"></div>
-    <div id="main2" style="width: 500px;height:300px;"></div>
+    <div id="main" style="width: 1500px;height:300px;"></div>
+    <div id="main2" style="width: 1500px;height:300px;"></div>
     <div id="main3" style="width: 500px;height:300px;"></div>
     
     <script th:inline="javascript">
@@ -23,7 +23,7 @@
             },
             xAxis: {
                 type: 'category',
-                data: ['BD', 'Biologia', 'Espanhol', 'Estruturda de dados', 'Filosofia', 'Geografia', 'Inglês Técnico', 'IMC', 'LP II', 'ONQ, Gestão de Organizações e Empreendedorismo', 'Produção Textual e Normas Técnicas', 'RC II', 'SMS', 'SO', 'Sociologia do Trabalho']
+                data: ['BD', 'Bio', 'Esp', 'ED', 'Filo', 'Geo', 'IT', 'IMC', 'LPII', 'Emp', 'PTNT', 'RCII', 'SMS', 'SO', 'ST']
             },
             yAxis: {
 
@@ -38,39 +38,48 @@
         };
         chart.setOption(option);
 
-
+        var data = /*[[${data}]]*/ [];
         var chart2 = echarts.init(document.getElementById('main2'));
         var option2 = {
             title: {
                 text: 'Sample Chart'
             },
-            tooltip: {},
             xAxis: {
-                data: ['A', 'B', 'C', 'D', 'E']
+                type: 'category',
+                data: ['BD', 'Bio', 'Esp', 'ED', 'Filo', 'Geo', 'IT', 'IMC', 'LPII', 'Emp', 'PTNT', 'RCII', 'SMS', 'SO', 'ST']
             },
-            yAxis: {},
+            yAxis: {
+
+                type: 'value'
+
+            },
             series: [{
                 name: 'Values',
-                type: 'bar',
-                data: data
+                data: data,
+                type: 'bar'
             }]
         };
         chart2.setOption(option2);
 
+        var data = /*[[${data}]]*/ [];
         var chart3 = echarts.init(document.getElementById('main3'));
         var option3 = {
             title: {
                 text: 'Sample Chart'
             },
-            tooltip: {},
             xAxis: {
-                data: ['A', 'B', 'C', 'D', 'E']
+                type: 'category',
+                data: ['BD', 'Bio', 'Esp', 'ED', 'Filo', 'Geo', 'IT', 'IMC', 'LPII', 'Emp', 'PTNT', 'RCII', 'SMS', 'SO', 'ST']
             },
-            yAxis: {},
+            yAxis: {
+
+                type: 'value'
+
+            },
             series: [{
                 name: 'Values',
-                type: 'pie',
-                data: data
+                data: data,
+                type: 'pie'
             }]
         };
         chart3.setOption(option3);

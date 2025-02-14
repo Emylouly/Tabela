@@ -14,7 +14,7 @@ public class RelatorioController {
     public ModelAndView index() {
         ModelAndView mv = new ModelAndView();
         mv.setViewName("relatorios/index");
-        mv.addObject("data", new int[]{9, 9, 8, 7, 9, 9, 8, 10, 7, 7, 7, 9, 9, 9, 7});
+        mv.addObject("data", new int[]{9, 9, 8, 7, 9, 9, 8, 9, 7, 7, 7, 9, 9, 9, 7});
         return mv;
     }
 }
